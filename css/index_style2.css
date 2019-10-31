@@ -1,0 +1,112 @@
+ html{
+  width: 100%;
+  height: 100%;
+  background-color: #aaa;
+  font-family: "微軟正黑體","Microsoft JhengHei";
+  color: #555;
+
+}
+
+body{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+  align-items:center;
+  justify-content:center;
+}
+
+.center_box{
+  padding-top: 10px;
+  padding-right: 0px;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+}
+
+
+.clear:after{
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.set_right{
+  display: block;
+  float: right;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+
+.question{
+  width: 1000px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.ans_area{
+  width: 1000px;
+}
+
+.answer_style{
+  width: 230px;
+  margin: 0px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.monster_style{
+  margin: 0px;
+  text-align: center;
+  margin-right: 30px;
+  margin-top: -40px;
+  filter:grayscale(100%);
+  z-index: 10;
+  /* filter: hue-rotate(27deg); */
+}
+
+#que{
+  width: 1000px;
+  height:80px;
+  margin: auto;
+}
+
+#play_area{
+  display: block;
+  width: 1000px;
+  height: 450px;
+  margin: auto;
+  margin-top: 40px;
+  background-color: #999;
+  position: relative;
+}
+
+.player{
+  margin-top: 0;
+  position:absolute;
+}
+
+.ball{
+  width: 25px;
+  height:25px;
+  border-radius: 50%;
+  position:absolute;
+  box-shadow: 0 3px 6px 0px rgba(0,0,1,0.6);
+  z-index: 5;
+
+}
+
+.last_box{
+  margin-right: 0px;
+}

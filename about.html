@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LIFE|參觀資訊</title>
+  <meta name="description" content="捕捉瞬間感動，直盯、細瞧，肆掠化境 攝影展">
+  <!-- bookstrap -->
+  <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <!-- Roboto Font -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+  <!-- local -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/firebase.js"></script>
+</head>
+<body>
+  <div class="bar"></div>
+  <span class="glyphicon glyphicon-chevron-up"></span>
+  <logo><a href="index.html"><img src="img/logo_index.png" alt="logo"></a></logo>
+  <div class="butn">
+    <!-- <div  class="search_bar">
+      <form role="search">
+          <input type="text" class="form-control search_bar" placeholder="Search">
+      </form>
+    </div> -->
+    <gcse:search class="search_bar"></gcse:search>
+    <img src="img/btn_search.png" alt="search" class="search_btn">
+    <img src="img/btn_login.png" alt="search" class="login_btn">
+    <button class="hamburger hamburger-cancel">
+      <span class="icon"></span>
+    </button>
+  </div>    <!-- btn -->
+
+  <div class="banner"><img src="img/banner.png" alt="logo" id="banner"></div>
+  <div class="banner_p">
+    <h3>LIFE攝影展</h3>
+    <p>LIFE攝影展起源於LIFE雜誌，創辦人aaaa先生是位國際著名的攝影師，
+      拍攝無數張世界秘境的美景，他希望能透過自己的相機,將美麗的世界分享給世上每個角落。
+      曾得過無數攝影大獎，在他退休後，仍致力將世界不為人知得風景呈現給社會大眾。
+      於1980年創辦LIFE雜誌，吸引志同道合的攝影師一起分享他們所見所聞，分享他們相機中的世界。</p>
+    <span class="glyphicon glyphicon-chevron-down"></span>
+  </div>
+  <div class="container">
+    <div>
+      <h3>展覽介紹</h3>
+      <p>1990年代成立LIFE 攝影展，每5年舉辦一次為期3周，舉辦地點遍部世界各地，
+        是一場眾所期待的展覽。拍攝作品多為風景與人物，風格多變，
+        不管是柔和、壯闊，亦或現代、懷舊，展中每張照片都令人驚艷，帶給參觀者不同的視覺衝擊與饗宴。</p>
+      <div class="row artist">
+        <div class="col-sm-4 col-xs-12"><img src="img/Clem Onojeghuo.jpg" alt="" id="artist_1"></div>
+        <div class="col-sm-4 col-xs-12"><img src="img/Jaromír Kavan.jpg" alt="" id="artist_2"></div>
+        <div class="col-sm-4 col-xs-12"><img src="img/Mario Klassen.jpg" alt="" id="artist_3"></div>
+      </div>
+    </div>
+    <div id="ticket">
+      <h3>購票資訊</h3>
+      <p>本展自2月13日至3月5日在華山文創園區盛大展出，歡迎大家一起走進鏡頭下的世界!</p>
+      <table>
+        <tr>
+        　<td style="width:150px;">票種</td>
+        　<td style="width:100px;">票價</td>
+          <td>適用範圍</td>
+      　</tr>
+      　<tr>
+        　<td>全票</td>
+        　<td>$300</td>
+          <td>一般大眾</td>
+      　</tr>
+        <tr>
+        　<td>優待票</td>
+        　<td>$250</td>
+          <td>本國籍學生(請出示學生證)/20人(含)以上團體</td>
+      　</tr>
+        <tr>
+        　<td>特惠票</td>
+        　<td>$150</td>
+          <td>65歲上長者(請出示證件)/身障人士陪同者一位</td>
+      　</tr>
+        <tr>
+        　<td>免票</td>
+        　<td>X</td>
+          <td>身心障礙者(不分國籍,憑證件入場) /未滿6歲或身高120公分以下之兒童(需大人陪同入場)
+        </td>
+      　</tr>
+    </table>
+    </div>
+    <div>
+      <h3>展覽地點</h3>
+      <p>華山1914文創園區<br>地址：100台北市中正區八德路一段1號</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7036203212315!2d121.5272108154275!3d25.044130283967597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96523e0246d%3A0xf1c9276707165c71!2z6I-v5bGxMTkxNOaWh-WJteWckuWNgA!5e0!3m2!1szh-TW!2stw!4v1483802003197" width="700" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <footer class="container-fluid">
+    <div>
+      <img src="" alt="">
+    </div>
+    <p>copyright 2017 Life攝影展</p>
+  </footer>
+
+  <!-- log -->
+  <div  class="login">
+    <span class="glyphicon glyphicon-remove"></span>
+    <img src="img/img_login.png" alt="" class="leave_login">
+    <form action="#">
+      <div>
+        <input type="text" id="email" placeholder="E-mail">
+        <!-- <label for="email">E-mail</label> -->
+      </div>
+      <div>
+        <input type="password" id="password" placeholder="Password">
+        <!-- <label for="password">Password</label> -->
+      </div>
+    </form>
+
+      <!-- SignIn/SignOut Button -->
+    <button id="btnSignIn">Sign In</button>
+    <button id="btnSignUp">Sign Up</button>
+    <button id="btnSignOut">Sign Out</button>
+    <!-- Sign Information -->
+    <div class="mdl-card__supporting-text" id="sign-info">No one login...</div>
+  </div>
+  <!-- log -->
+
+  <!-- ham menu -->
+  <nav class="hamburger_menu">
+    <ul>
+      <li><a href="news.html">最新消息</a></li>
+      <li><a href="about.html">參觀資訊</a></li>
+      <li><a href="activity.html">主題活動</a></li>
+      <li><a href="contact.html">聯絡我們</a></li>
+    </ul>
+  </nav>
+  <!-- hambuger -->
+
+  <!-- <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2F&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+  https://developers.facebook.com/docs/plugins/share-button/ -->
+
+  <!-- artist work -->
+  <div class="works">
+    <div id="works_1">
+      <span class="glyphicon glyphicon-remove"></span>
+      <img src="img/Clem Onojeghuo.jpg" alt="">
+      <h3>Clem Onojeghuo</h3>
+      <div class="row">
+        <div class="col-lg-6 col-xs-12 heart_target">
+          <img src="img/Clem Onojeghuo_1.jpg" alt="" class="works_img">
+          <div class="hearteare">
+            <img src="img/heart_line.png" alt="" class="heart" /><p class="num0"></p>
+          </div>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2Fimg%2FClem%2520Onojeghuo_1.jpg&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+        <div class="col-lg-6 col-xs-12 heart_target">
+          <img src="img/Clem Onojeghuo_2.jpg" alt="" class="works_img">
+          <div class="hearteare">
+            <img src="img/heart_line.png" alt="" class="heart" /><p class="num1"></p>
+          </div>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2Fimg%2FClem%2520Onojeghuo_2.jpg&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-xs-12 heart_target">
+          <img src="img/Clem Onojeghuo_3.jpg" alt="" class="works_img">
+          <div class="hearteare">
+            <img src="img/heart_line.png" alt="" class="heart" /><p class="num2"></p>
+          </div>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2Fimg%2FClem%2520Onojeghuo_3.jpg&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+        <div class="col-lg-6 col-xs-12 heart_target">
+          <img src="img/Clem Onojeghuo_4.jpg" alt="" class="works_img">
+          <div class="hearteare">
+            <img src="img/heart_line.png" alt="" class="heart" /><p class="num3"></p>
+          </div>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2Fimg%2FClem%2520Onojeghuo_4.jpg&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-xs-12 heart_target">
+          <img src="img/Clem Onojeghuo_5.jpg" alt="" class="works_img">
+          <div class="hearteare">
+            <img src="img/heart_line.png" alt="" class="heart" /><p class="num4"></p>
+          </div>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2Fimg%2FClem%2520Onojeghuo_5.jpg&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+      </div>
+    </div>    <!-- 001 -->
+    <div id="works_2">
+      <span class="glyphicon glyphicon-remove"></span>
+      <img src="img/Jaromír Kavan.jpg" alt="">
+      <h3>Jaromír Kavan</h3>
+      <div class="row">
+        <div class="col-lg-6 col-xs-12 heart_target">
+          <img src="img/Jaromír Kavan_1.jpg" alt="" class="works_img">
+          <div class="hearteare">
+            <img src="img/heart_line.png" alt="" class="heart" /><p class="num5"></p>
+          </div>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2Fimg%2FJarom%25C3%25ADr%2520Kavan_1.jpg&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+        <div class="col-lg-6 col-xs-12 heart_target">
+          <img src="img/Jaromír Kavan_2.jpg" alt="" class="works_img">
+          <div class="hearteare">
+            <img src="img/heart_line.png" alt="" class="heart" /><p class="num6"></p>
+          </div>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2Fimg%2FJarom%25C3%25ADr%2520Kavan_2.jpg&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-xs-12 heart_target">
+          <img src="img/Jaromír Kavan_3.jpg" alt="" class="works_img">
+          <div class="hearteare">
+            <img src="img/heart_line.png" alt="" class="heart" /><p class="num7"></p>
+          </div>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2Fimg%2FJarom%25C3%25ADr%2520Kavan_3.jpg&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+      </div>
+    </div>    <!-- 002 -->
+    <div id="works_3">
+      <span class="glyphicon glyphicon-remove"></span>
+      <img src="img/Mario Klassen.jpg" alt="">
+      <h3>Mario Klassen</h3>
+      <div class="row">
+        <div class="col-lg-6 col-xs-12 heart_target">
+          <img src="img/Mario Klassen_1.jpg" alt="" class="works_img">
+          <div class="hearteare">
+            <img src="img/heart_line.png" alt="" class="heart" /><p class="num8"></p>
+          </div>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2Fimg%2FMario%2520Klassen_1.jpg&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+        <div class="col-lg-6 col-xs-12 heart_target">
+          <img src="img/Mario Klassen_2.jpg" alt="" class="works_img">
+          <div class="hearteare">
+            <img src="img/heart_line.png" alt="" class="heart" /><p class="num9"></p>
+          </div>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2Fimg%2FMario%2520Klassen_2.jpg&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-xs-12 heart_target">
+          <img src="img/Mario Klassen_3.jpg" alt="" class="works_img">
+          <div class="hearteare">
+            <img src="img/heart_line.png" alt="" class="heart" /><p class="num10"></p>
+          </div>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftangyiwen.github.io%2Ff2e_final%2Fimg%2FMario%2520Klassen_3.jpg&layout=button_count&size=small&mobile_iframe=true&appId=387247178289384&width=65&height=20" width="65" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- 003 -->
+  <!-- artist work -->
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
