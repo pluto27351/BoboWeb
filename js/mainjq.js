@@ -1,9 +1,8 @@
-var size = 0;
-var scaleSpeed = 0.03;
 var center = $('.center');
-var centerHover = false;
+var ball = $('.info');
 var centerSize = [];
-var x = 180;
+var ballSize = [];
+
 var pi = (Math.PI );
 
 
@@ -11,13 +10,12 @@ $(document).ready(function(){
   centerSize.push(center.width());
   centerSize.push(center.height());
 
-  setInterval(update,10);
+  ballSize.push(ball.width());
+  ballSize.push(ball.height());
+
 
 });
 
-function update(){
-
-}
 
 
 // $(document).mousemove(function(e){
@@ -39,7 +37,6 @@ function getMousePos(event) {
        var x = e.clientX + scrollX;
        var y = e.clientY + scrollY;
        //alert('x: ' + x + '\ny: ' + y);
-
        mouxeX= x;
        mouxeY = y;
 }
@@ -86,4 +83,49 @@ center.mouseleave(function(){
   center.css("width", centerSize[0]);
   center.animateRotate(0,500);
 
+});
+
+$(".info").mouseenter(function(){
+  $(".info").css("width", ballSize[0]*1.05);
+  $(".info").animateRotate(160,500);
+});
+$(".info").mouseleave(function(){
+  $(".info").css("width", ballSize[0]);
+  $(".info").animateRotate(0,500);
+});
+
+$(".quedata").mouseenter(function(){
+  $(".quedata").css("width", ballSize[0]*1.05);
+  $(".quedata").animateRotate(160,500);
+});
+$(".quedata").mouseleave(function(){
+  $(".quedata").css("width", ballSize[0]);
+  $(".quedata").animateRotate(0,500);
+});
+
+$(".bobogame").mouseenter(function(){
+  $(".bobogame").css("width", ballSize[0]*1.05);
+  $(".bobogame").animateRotate(160,500);
+});
+$(".bobogame").mouseleave(function(){
+  $(".bobogame").css("width", ballSize[0]);
+  $(".bobogame").animateRotate(0,500);
+});
+
+$(".game").mouseenter(function(){
+  $(".game").css("width", ballSize[0]*1.05);
+  $(".game").animateRotate(160,500);
+});
+$(".game").mouseleave(function(){
+  $(".game").css("width", ballSize[0]);
+  $(".game").animateRotate(0,500);
+});
+
+$(".people").mouseenter(function(){
+  $(".people").css("width", ballSize[0]*1.05);
+  $(".people").animateRotate(160,500);
+});
+$(".people").mouseleave(function(){
+  $(".people").css("width", ballSize[0]);
+  $(".people").animateRotate(0,500);
 });

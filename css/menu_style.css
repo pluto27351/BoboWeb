@@ -34,10 +34,11 @@ header{
   display: block;;
   position: relative;
   width: 1240px;
-  height: 100%;
+  height: 1000px;
   padding-left: 20px;
   padding-right: 20px;
   margin: auto;
+  background-image: url(../img/bg.png);
 
 }
 
@@ -57,15 +58,33 @@ a{
   letter-spacing: 50px;　
 }
 
+/* .ball{
+  display: block;
+  position:absolute;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  transform: rotate(0deg);
+
+} */
+.balls{
+  display: block;
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+
 .ball{
   display: block;
   position:relative;
   width: 200px;
   height: 200px;
   text-align: center;
-
-
+  float: left;
 }
+
 
 .ball p{
   /* display: block; */
@@ -75,10 +94,41 @@ a{
   left:0;
   margin-top: -12px;
   text-align: center;
-
 }
 
+.ball img{
+  transform: rotate(0deg);
+}
 
+/* .ainfo{
+  left: 50%;
+  top : 0px;
+  margin-left: -100px;
+}
+
+.aquedata{
+  left: 20%;
+  top:275px;
+  margin-left: -100px;
+}
+
+.abobogame{
+  right: 20%;
+  top:275px;
+  margin-right: -100px;
+}
+
+.agame{
+  left: 32%;
+  top: 720px;
+  margin-left: -100px;
+}
+
+.apeople{
+  right: 32%;
+  top:720px;
+  margin-right: -100px;
+} */
 
 /* footer{
   position:fixed;
