@@ -59,6 +59,8 @@ function createQue(){
     if(snapshot.key == 'q'){
       var data = snapshot.val();
       $('.question').html(data);
+      var height = $('.question').height() /-2 ;
+      $('.question').css('margin-top',height);
     }
     else if(snapshot.key == 'a'){
       var maxAns = snapshot.numChildren();
@@ -87,16 +89,16 @@ function createQue(){
 
       for(var i=0;i<maxAns-1;i++){
         var ans = anss[i];
-        console.log("ans =" + anss[i] + "correct = " + ansNo[i]);
-        var newball = document.createElement("h4");
-        newball.setAttribute('class','answer_style');
-        if((i+1) == maxAns-1){newball.setAttribute('class','answer_style last_box')}
+        // console.log("ans =" + anss[i] + "correct = " + ansNo[i]);
+        var newAns = document.createElement("div");
+        newAns .setAttribute('class','answer_style set_left');
+        var anstext = document.createElement("h4");
+        var ansbox = $(newAns);
+        $(anstext).html(ans);
 
-        var ball= $(newball);
-        ball.html(ans);
-        ball.css('background-color',ballcolor[i]);
-
-        $('.ans_area').append(newball);
+        ansbox.css('background-color',ballcolor[i]);
+        ansbox.append($(anstext));
+        $('.ans_area').append(ansbox);
       }
 
       for(var i=0;i<ansCount;i++){

@@ -9,9 +9,6 @@
 
   <!-- Roboto Font -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
   <!-- Material Design Lite -->
@@ -19,30 +16,45 @@
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
   <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
   <!-- local -->
-  <link rel="stylesheet" href="css/index_style2.css">
-  <script src="js/firebase.js"></script>
+  <link rel="stylesheet" href="css/index_style.css">
 </head>
 <body>
-  <header class ="clear">
-    <div class = "set_right">
-      <a href="menupage.html"><img src="img/btn_login.png" alt="search" class="login_btn"></a>
-    </div>
-  </header>
   <div class="container">
-      <div id ="que">
-        <h3 class ="question"></h3>
-        <div class ="ans_area center_box"></div>
-      </div>
-      <div id = "play_area">
-        <div class ="monster_area center_box"></div>
-        <img src="img/player.png" alt="search" class="player">
-        <div class = "ball_area"></div>
+    <div class="ball logo">
+      <img src="img/index_logo.png" alt="search">
+      <p>小寶玩分數</p>
     </div>
-  </div>
+
+    <div class= "balls">
+      <a href="#" class="ball info">
+        <img src="img/index_btn.png" alt="search">
+        <p>分級介紹</p>
+      </a>
+
+      <a href="game.html" class="ball game">
+        <img src="img/index_btn.png" alt="search">
+        <p>遊戲</p>
+      </a>
+
+      <a href="#" class="ball quedata">
+        <img src="img/index_btn.png" alt="search">
+        <p>遊戲介紹</p>
+      </a>
+
+      <a href="#" class="ball bobogame">
+        <img src="img/index_btn.png" alt="search">
+        <p>小寶玩分數</p>
+      </a>
+
+      <a href="#" class="ball people">
+        <img src="img/index_btn.png" alt="search">
+        <p>製作團隊</p>
+      </a>
+    </div>
+  </div>  <!-- container_fluid -->
 
 
   <script src="js/jquery.js"></script>
-  <!-- <script src="js/bootstrap.min.js"></script> -->
-  <script src="js/script2.js"></script>
+  <script src="js/indexJQ.js"></script>
 </body>
 </html>

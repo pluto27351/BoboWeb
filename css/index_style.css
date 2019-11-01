@@ -1,408 +1,112 @@
 html{
   width: 100%;
   height: 100%;
-  background-color: #FFF;
+  background-color: #dae8d5;
   font-family: "微軟正黑體","Microsoft JhengHei";
-  color: #1e785c;
-  /*text-align: left;*/
-  background-image: url(../img/bg_index.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
+  color: #fff;
 
-body,input,button,select,textarea{
-font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "微软雅黑", "メイリオ", "맑은 고딕", sans-serif;
-font-size:108%;
 }
 
 body{
-  margin: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/bg_index.png);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  background-image: url(../img/bg.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-}
 
-
-.container{
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/div_tri.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position:left center;
-  //background-size: cover;
-}
-
-@media screen and (max-width: 1024px){/*tri < L*/
-  .container{
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/div_tri.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position:left center;
-    background-size: cover;
-  }
-}
-@media screen and (max-height: 350px){/*tri < L*/
-  .container{
-    width: 100%;
-    height: 100%;
-    background-image: none;
-  }
-}
-
-
-/*btn*/
-.butn{
   position: relative;
-  z-index: 1000;
-  text-align: right;
-  padding-top: 15px;
-  margin-right: 5px;
-}
-.butn>.search_btn:hover, .butn>.login_btn:hover, .butn>button:hover{
-  background-color: rgba(0, 0, 0, 0.5);
-//  border-radius: 50%;
-//  box-shadow: 0 0 3px black;
-  padding:0 3px;
+  align-items:center;
+  justify-content:center;
 }
 
-@media screen and (max-width: 1024px){/*tri < L*/
-  .btn{
-    position: relative;
-    z-index: 1000;
-    text-align: right;
-    padding-top: 10px;
-    margin-right: 5px;
-  }
+/* 下滑消失 上滑出現 */
+header{
+  position:fixed;
+  right:0;
 }
 
-/*search*/
-#___gcse_0{
-  display: inline-block;
-  display: none;
-  position: absolute;
-  top: 15px;
-  right: 170px;
-  height: 50px;
-//  padding:5px 15px;
-//  background:#fff;
-  width: 200px;
-  border:0 none;
-  cursor:text;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  text-align: left;
-}
-#___gcse_0>div{
-  padding: 0;
-}
-.search_bar input[type="text"]{
-
-}
-@media screen and (max-width: 1024px){
-  #___gcse_0 /* input[type="text"]*/{
-    position: absolute;
-    height: 30px;
-    top: 10px;
-    right: 132px
-  }
-}
-
-
-/*search login btn*/
-.search_btn, .login_btn{
-  margin-right: 15px;
-  cursor:pointer;
-}
-@media screen and (max-width: 1024px){
-  .search_btn, .login_btn{
-    height: 30px;
-  }
-}
-
-/*login*/
-.login{
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/banner_ham.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  text-align: center;
-  top: 0;
-  right: 0;
-  z-index: 10000;
-  padding: 100px;
-}
-#sign-info{
-  color: #fff;
-}
-.login input[type="text"],.login input[type="password"]{
-  height: 40px;
-  width: 250px;
-  padding:5px 15px;
-  margin-bottom: 10px;
-  background:#fff;
-  border:0 none;
-  cursor:text;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-@media screen and (max-width: 768px){
-  .login{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 50px;
-  }
-}
-.login button{
-  font-size: 14px;
-  cursor:pointer;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  border-style: solid;
-  background-color: rgba(255, 255, 255, 0);
-  width: 80px;
-  height: 40px;
-  margin-top: 10px;
-  color: #fff;
-}
-.login .glyphicon-remove{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 35px;
-    color: #fff;
-    cursor: pointer;
-  }
-.glyphicon-remove:hover{
-    color: #aaa;
-}
-/*login*/
-
-/*ham*/
-.hamburger {
-  margin-top: 0px;
-  font-size: 40px;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  padding: 0;
-  cursor: pointer;
-  transition: transform .2s ease-in-out;
-  vertical-align: middle;
-  border: 0 none;
-  background: transparent;
-}
-@media screen and (max-width: 1024px){
-  .hamburger{
-    font-size: 30px;
-  }
-}
-/*+ Button height fix for Firefox*/
-.hamburger::-moz-focus-inner {
-  padding: 0;
-  border: 0 none;
-}
-/*+ Focus fix for Chrome*/
-.hamburger:focus {
-  outline: 0;
-}
-.hamburger:before,.hamburger:after {
-  content: "";
-}
-.hamburger:before,.hamburger .icon,.hamburger:after {
-  display: block;
-  width: 100%;
-  height: .2em;
-  margin: 0 0 .2em;
-  transition: transform .2s ease-in-out;
-  border-radius: .05em;
-  background: #FFF;
-}
-/*+ Styles for the active `.hamburger` icon*/
-.hamburger.active:before,.hamburger.active .icon,.hamburger.active:after {
-  background: #FFF;
-}
-/* + VERTICAL HAMBURGER*/
-.hamburger.hamburger-vertical.active {
-  transform: rotate(270deg);
-}
-/*+ CLOSE/CANCEL/CROSS*/
-.hamburger.hamburger-cancel.active .icon {
-  transform: scale(0);
-}
-.hamburger.hamburger-cancel.active:before {
-  transform: translateY(.4em) rotate(135deg);
-}
-.hamburger.hamburger-cancel.active:after {
-  transform: translateY(-.4em) rotate(-135deg);
-}
-/*btn end*/
-
-/*ham menu*/
-.hamburger_menu{
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/bg_index_ham.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 100;
-}
-.hamburger_menu ul{
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  list-style: none;
-  margin-top: 150px;
-}
-.hamburger_menu li{
-  margin-bottom: 70px;
-  font-size: 24px;
-}
-.hamburger_menu a{
+a{
   text-decoration: none;
   color: #fff;
   letter-spacing: 50px;　
 }
-.hamburger_menu a:hover{
-  color: #aaa;
-  text-decoration: none;
+
+.container{
+  display: block;;
+  position: relative;
+  width: 1240px;
+  /* height: 768px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+
+
 }
-/*ham menu end*/
-@media screen and (max-height: 600px){/*ham menu < L*/
-  .hamburger_menu ul{
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    list-style: none;
-    margin-top: 100px;
-  }
-  .hamburger_menu li{
-    margin-bottom: 40px;
-    font-size: 20px;
-  }
-  .hamburger_menu a{
-    text-decoration: none;
-    color: #fff;
-    letter-spacing: 40px;　
-  }
+
+.logo{
+  position:absolute;
+  top: 21px;
+  right: 89px;
+  transform: rotate(0deg);
+}
+
+.logo p{
+  font-size: 70px;
+}
+
+.info{
+  position:absolute;
+  top: 162px;
+  left: 370px;
+}
+
+.game{
+  position:absolute;
+  top: 336px;
+  left: 440px;
+}
+
+.quedata{
+  position:absolute;
+  top: 465px;
+  right: 547px;
+}
+
+.bobogame{
+  position:absolute;
+  top: 546px;
+  right: 371px;
+}
+
+.people{
+  position:absolute;
+  top: 585px;
+  right: 179px;
 }
 
 
-/*slogan*/
-slogan p{
-  text-indent : -4em ;
-  text-shadow: 1px 1px 5px #000;
-  color: #fff;
-  margin-top: 5%;
-  margin-left: 30%;
-  margin-bottom: 0px;
-  line-height: 36px;
-  font-size: 20px;
-  letter-spacing: 20px;　
-}
-/*slogan*/
-
-@media screen and (max-height: 650px){/*slogan < L*/
-  slogan p{
-    text-indent : -4em ;
-    text-shadow: 1px 1px 5px #000;
-    color: #fff;
-    margin-top: 0;
-    margin-left: 30%;
-    margin-bottom: 0px;
-    line-height: 36px;
-    font-size: 16px;
-    letter-spacing: 10px;　
-  }
-}
-@media screen and (max-width: 1000px){/*slogan < L*/
-  slogan p{
-    text-indent : 0em ;
-    text-shadow: 1px 1px 5px #000;
-    color: #fff;
-    margin-top: 0;
-    margin-left: 10%;
-    margin-bottom: 0px;
-    line-height: 36px;
-    font-size: 16px;
-    letter-spacing: 12px;　
-  }
+.ball p{
+  /* display: block; */
+  position:absolute;
+  width: 100%;
+  top: 50%;
+  left:0;
+  margin-top: -12px;
+  text-align: center;
 }
 
-/*logo*/
-logo{
-  display: block;
-  width: 350;
-  margin-left: 60;
+.ball img{
+  transform: rotate(0deg);
 }
 
-logo img{
-  margin-top: 13%;
-  margin-left: 10%;
-  max-width: 474px;
-  max-height: 216px;
-  width: 80%;
-}
-logo img:hover{
-  //box-shadow: 0 0 3px black;
-  padding: 3px;
-}
-/*logo end*/
-
-@media screen and (max-height: 650px){/*logo < L*/
-  logo{
-    display: block;
-    width: 350;
-  }
-
-  logo img{
-    margin-top: 1%;
-    margin-left: 10%;
-    max-width: 350px;
-    //max-height: 50%;
-    width: 70%;
-  }
-}
-
-@media screen and (max-width: 1000px){/*logo < L*/
-  logo{
-    display: block;
-    left: 100px;
-  }
-
-  logo img{
-    margin-top: 5%;
-    margin-left: 10%;
-    max-width: 350px;
-    //max-height: 50%;
-    width: 70%;
-  }
-}
 
 .clear:after{
-  content: " ";
-  display: block;
-  clear: both;
+    display: block;
+    clear:both;
+    content:"";
 }

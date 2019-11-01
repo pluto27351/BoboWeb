@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>小寶大亂鬥</title>
+  <meta name="description" content="遊戲分級">
+
+  <!-- Roboto Font -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <!-- local -->
+  <link rel="stylesheet" href="css/game_style.css">
+  <script src="js/firebase.js"></script>
+</head>
+<body>
+  <header class ="sclear">
+      <a href="index.html" class="logo"><img src="img/menu_logo_b2.png" alt="search"></a>
+      <a href="#" class="menuball info"><img src="img/menu_btn.png" alt="search"><p>分級介紹</p></a>
+      <a href="#" class="menuball quedata"><img src="img/menu_btn.png" alt="search"><p>遊戲介紹</p></a>
+      <a href="#" class="menuball bobogame"><img src="img/menu_btn.png" alt="search"><p>小寶玩分數</p></a>
+      <a href="#" class="menuball people"><img src="img/menu_btn.png" alt="search"><p>製作團隊</p></a>
+     <!-- container_fluid -->
+  </header>
+  <div class="container">
+      <div class="clear" id ="que">
+        <div class="question_area set_left">
+          <h4 class ="question"></h4>
+        </div>
+        <div class ="ans_area set_right"></div>
+      </div>
+      <div class="clear">
+        <div class="data set_left">
+          <div class = "point_area">
+            <img src="img/point.png" alt="search" class="point top_point">
+            <img src="img/point.png" alt="search" class="point top_point">
+            <img src="img/point.png" alt="search" class="point top_point">
+            <img src="img/point.png" alt="search" class="point top_point last_box">
+            <img src="img/point.png" alt="search" class="point">
+            <img src="img/point.png" alt="search" class="point">
+            <img src="img/point.png" alt="search" class="point">
+            <img src="img/point.png" alt="search" class="point last_box">
+          </div>
+          <img src="img/game_teach.png" alt="search" class="teacg">
+        </div>
+        <div class = "set_right" id = "play_area">
+          <div class ="monster_area center_box"></div>
+          <img src="img/player.png" alt="search" class="player">
+          <div class = "ball_area"></div>
+        </div>
+    </div>
+  </div>
+
+
+  <script src="js/jquery.js"></script>
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <script src="js/gameJQ.js"></script>
+</body>
+</html>
