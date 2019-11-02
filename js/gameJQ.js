@@ -49,7 +49,7 @@ function update(){
 }
 
 function randomball(max){
-  console.log("12313");
+  ballAmount = max;
   for(var i=0;i<max;i++){
     var newball = document.createElement("img");
     newball.setAttribute('class','ball');

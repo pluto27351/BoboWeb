@@ -92,6 +92,7 @@ function createQue(){
         // console.log("ans =" + anss[i] + "correct = " + ansNo[i]);
         var newAns = document.createElement("div");
         newAns .setAttribute('class','answer_style set_left');
+        // if((i+1) == maxAns-1){newball.setAttribute('class','answer_style set_left last_box')}
         var anstext = document.createElement("h4");
         var ansbox = $(newAns);
         $(anstext).html(ans);
@@ -112,11 +113,13 @@ function createQue(){
         $('.monster_area').append(monster);
       }
 
+      randomball(maxAns-1);
+
     }
   });
 
   gameStart = true;
-  randomball(ballAmount);
+  //randomball(ballAmount);
   nowQueNo++;
 }
 
