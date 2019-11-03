@@ -14,7 +14,7 @@ var getball = false;
 var ballCD = 0;
 var ballAmount = 4;
 // var ballcolor = ["#FFAA9B", "#86F573", "#8AD5ED", "#FFE68F"];  //, "#C48AFF"
-var ballcolor = ["#7c86b8","#b96076", "#e8bb29","#59a87d"];
+var ballcolor = ["#7c86b8","#b96076", "#efbb35","#59a87d"];
 var monstercolor = ['hue-rotate(-123deg)','hue-rotate(27deg)' ,'hue-rotate(60deg)','hue-rotate(123deg)'];
 var test = 'hue-rotate(123deg)';
 var gameStart = false;
@@ -154,7 +154,7 @@ function monsterAndBall(){
 
         monstersball[i] = catchedball;         //怪物換球 & 球吸到怪物上
         if(monstersball[i] != -1){
-          aniMove(monsters[i],balls[catchedball],30);
+          aniMove(monsters[i],balls[catchedball],0);
           monsters[i].css('filter','grayscale(0%)');
           monsters[i].css('filter', monstercolor[catchedball]);
         //  follow(monsters[i],balls[catchedball],20);

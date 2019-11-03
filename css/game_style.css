@@ -22,8 +22,12 @@ body{
   position: relative;
   align-items:center;
   justify-content:center;
+  font-family: "微軟正黑體","Microsoft JhengHei";
 }
 
+h4{
+  font-family: "微軟正黑體","Microsoft JhengHei";
+}
 
 .clear:after{
   display: block;
@@ -69,8 +73,8 @@ body{
   top: 52%;
   padding:10px 15px;
   margin:0px 0px 0px 123px ;
-  line-height: 30px;　　　
-  /* margin:-40% 10px 0px 10px; /* -20是字高!! */
+  line-height: 35px;　　　
+  /* margin:-40% 10px 0px 10px; */ /* -20是字高!! */
 }
 
 .ans_area{
@@ -82,13 +86,14 @@ body{
 }
 .answer_style{
   position: relative;
-  width: 277px;
+  width: 270px;
   height:118px;
   margin: 0px;
   text-align: center;
   margin-left: 12px;
   margin-top: 10px;
   border-radius:10px;
+  border:3px #000 solid;
 }
 .answer_style p{
   position:absolute;
@@ -98,6 +103,7 @@ body{
   padding: 0px;
   margin-top:-12px; /* -20是字高!! */
 }
+
 
 
 .data{
@@ -172,7 +178,17 @@ body{
   margin-top: -40px;
   filter:grayscale(100%);
   z-index: 10;
+  animation: rotating 2s ease-in-out infinite;
   /* filter: hue-rotate(27deg); */
+}
+@keyframes rotating {
+    50% {
+        transform: rotate(calc(30deg));
+    }
+    100% {
+        transform: rotate(calc(0deg));
+    }
+
 }
 
 .player{
