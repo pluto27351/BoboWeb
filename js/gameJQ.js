@@ -44,7 +44,7 @@ function update(){
   }
   else {ballCD -=1;}
 
-  if(catchedball != -1)follow(player,balls[catchedball],15);
+  if(catchedball != -1)follow(player,balls[catchedball],0,-3);
 
 }
 
@@ -56,8 +56,8 @@ function randomball(max){
     newball.setAttribute('src','img/ans_point.png');
     var ball= $(newball);
 
-    var maxH = play_area.height()-30-25;  //球的長寬=25
-    var maxW = play_area.width()-40-25;
+    var maxH = play_area.height()-30-35;  //球的長寬=35
+    var maxW = play_area.width()-40-35;
     var minH =  70;
     var minW =  40;
 
@@ -116,6 +116,7 @@ function collision(item,hitObj,padding_top = 0,padding_right = 0){
 
 
 function follow(aim,follower,ptop=0,pright=0) {
+  console.log("top = " + ptop);
   var posY  = aim.offset().top + (aim.height() - follower.height())/2 + ptop;
   var posX  = aim.offset().left + (aim.width() - follower.width())/2 + pright;
   follower.offset({top:posY , left:posX});
@@ -265,3 +266,11 @@ $(document).keyup(function(event){
       break;
   }
 })
+
+$(".menu").mouseenter(function(){
+  $(".menuball").css('display','block');
+
+});
+$(".menu").mouseleave(function(){
+  $(".menuball").css('display','none');
+});

@@ -93,7 +93,7 @@ function createQue(){
         var newAns = document.createElement("div");
         newAns .setAttribute('class','answer_style set_left');
         // if((i+1) == maxAns-1){newball.setAttribute('class','answer_style set_left last_box')}
-        var anstext = document.createElement("h4");
+        var anstext = document.createElement("p");
         var ansbox = $(newAns);
         $(anstext).html(ans);
 

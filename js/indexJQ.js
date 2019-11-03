@@ -1,13 +1,13 @@
-var logo = $('.logo img');
+// var logo = $('.logoxxx img');
 var ball = $('.info img');
-var logoSize = [];
+// var logoSize = [];
 var ballSize = [];
 
 var pi = (Math.PI );
 
 $(document).ready(function(){
-  logoSize.push(logo.width());
-  logoSize.push(logo.height());
+  // logoSize.push(logo.width());
+  // logoSize.push(logo.height());
 
   ballSize.push(ball.width());
   ballSize.push(ball.height());
@@ -57,16 +57,16 @@ function MatrixToReg(matrix){
 
 }
 
-$(".logo").mouseenter(function(){
-  $(".logo img").css("width", logoSize[0]*1.05);
-  $(".logo img").animateRotate(160,500);
-});
-
-$(".logo").mouseleave(function(){
-  $(".logo img").css("width", logoSize[0]);
-  $(".logo img").animateRotate(0,500);
-
-});
+// $(".logo").mouseenter(function(){
+//   $(".logo img").css("width", logoSize[0]*1.05);
+//   $(".logo img").animateRotate(160,500);
+// });
+//
+// $(".logo").mouseleave(function(){
+//   $(".logo img").css("width", logoSize[0]);
+//   $(".logo img").animateRotate(0,500);
+//
+// });
 
 $(".info").mouseenter(function(){
   console.log("in");

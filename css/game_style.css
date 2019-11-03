@@ -13,7 +13,7 @@ body{
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  /* background-image: url(../img/bg.png); */
+  background-image: url(../img/bg3.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -42,62 +42,68 @@ body{
 
 
 .container{
-  width: 1120px;
+  width: 1280px;
   height: 768px;
-  padding:20px 80px 0px 80px;
+  padding:0px;
   margin: auto;
   /* height: 100%; */
 }
 
 #que{
-  height:184px;
+  height:301px;
   margin-bottom: 20px;
+
 }
 .question_area{
   position: absolute;
-  width:518px;
-  height:184px;
+  width:700px;
+  height:333px;
   margin: 0px;
   text-align: center;
-  background-color: #777;
+  background-image: url(../img/monster.png);
   border-radius:10px;
 }
 .question{
   position:absolute;
-  width:498px;
-  top: 50%;
-  padding: 0px;
-  margin:0px 10px;
+  width:401px;
+  top: 52%;
+  padding:10px 15px;
+  margin:0px 0px 0px 123px ;
+  line-height: 30px;　　　
   /* margin:-40% 10px 0px 10px; /* -20是字高!! */
 }
 
 .ans_area{
-  width:528px;
-  height:184px;
-  margin-left: -10px;
-  margin-top: -10px;
+  width:580px;
+  height:258px;
+  margin-left: -12px;
+  /* margin-right: 20px; */
+  margin-top: 33px;
 }
 .answer_style{
-  width: 254px;
-  height: 87px;
+  position: relative;
+  width: 277px;
+  height:118px;
   margin: 0px;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 12px;
   margin-top: 10px;
   border-radius:10px;
 }
 .answer_style p{
   position:absolute;
-  width:234px;
+  font-size: 24px;
+  width:277px;
   top: 50%;
   padding: 0px;
-  margin:-20px 10px 0px 10px; /* -20是字高!! */
+  margin-top:-12px; /* -20是字高!! */
 }
 
 
 .data{
   width: 202px;
-  padding-top: 42px;
+  padding-top: 82px;
+  margin-left: 57px;
 }
 .point_area{
   height: 64px;
@@ -113,9 +119,7 @@ body{
 .top_point{
   margin-bottom:18px;
 }
-.teach{
-  background-color: #777;
-}
+
 
 
 .last_box{
@@ -130,16 +134,16 @@ body{
 
 #play_area{
   display: block;
-  width: 855px;
-  height: 524px;
+  width: 994px;
+  height: 579px;
   margin: auto;
   margin-top: 40px;
   background-color: rgba(255,255,255,0.4);
   position: relative;
 }
 .ball{
-  width: 25px;
-  height:25px;
+  width: 35px;
+  height:35px;
   /* border-radius: 50%; */
   position:absolute;
   z-index: 5;
@@ -152,7 +156,16 @@ body{
   display: flex;
   justify-content: center;
 }
+.monster_area{
+  width: 208px;
+  height:86px;
+  padding-top: 10px;
+  padding-right: 0px;
+  margin-left: 50px;
+  display: flex;
+}
 .monster_style{
+  height:86px;
   margin: 0px;
   text-align: center;
   margin-right: 30px;
@@ -204,7 +217,9 @@ header{
   top:0px;
 }
 .menuball{
+  display: none;
   width: 95px;
+
 }
 .menuball p{
   position:absolute;
