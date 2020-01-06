@@ -1,7 +1,7 @@
 var ansbox = document.getElementById("ans");
 var queNum = [];
 var queMax = 22;
-var queMaxGet = 7;
+var queMaxGet = 8;
 var nowQueNo = 0;
 var ansNo = [];
 var dbQue;
@@ -20,8 +20,8 @@ $(document).ready(function(){
   firebase.initializeApp(firebaseConfig);
   //dbQue = firebase.database().ref().child('question');
 
-  randomQue();
-  createQue();
+  // randomQue();
+  // createQue();
   //setInterval(update,60);
 
 
@@ -42,17 +42,24 @@ function randomQue(){
     queNum[b] = t;
   }
 
-  // for(var i=0;i<queMax;i++){
-  //     console.log(i + " = " + queNum[i]);
-  // }
+  for(var i=1;i<=8;i++){
+    $(".point_area img:nth-child("+i+")").css("opacity","100");
+    $(".point_area img:nth-child("+i+")").css("filter","grayscale(100%)");
+  }
+
 }
 
 function createQue(){
+
   if(nowQueNo >= queMaxGet) {
     alert("完成題目!")
+    $(".startBtn").css("display","block");
+    $(".question_area").css("background-image","url(img/monster22.png)");
+    gameStart = false;
     return;
   }
 
+  console.log("next");
   var dbQueNo = firebase.database().ref().child('question').child(queNum[nowQueNo]);
 
   dbQueNo.on('child_added', function (snapshot) {
@@ -89,10 +96,8 @@ function createQue(){
 
       for(var i=0;i<maxAns-1;i++){
         var ans = anss[i];
-        // console.log("ans =" + anss[i] + "correct = " + ansNo[i]);
         var newAns = document.createElement("div");
         newAns .setAttribute('class','answer_style set_left');
-        // if((i+1) == maxAns-1){newball.setAttribute('class','answer_style set_left last_box')}
         var anstext = document.createElement("p");
         var ansbox = $(newAns);
         $(anstext).html(ans);
@@ -100,43 +105,47 @@ function createQue(){
         ansbox.css('background-color',ballcolor[i]);
         ansbox.append($(anstext));
         $('.ans_area').append(ansbox);
+
+        console.log("ans"+i + " : " + ansNo[i]);
       }
 
       for(var i=0;i<ansCount;i++){
-        var monster = document.createElement("img");
-        monster.setAttribute('src','img/test.png');
-        monster.setAttribute('class','monster_style');
-        if(i==ansCount-1) monster.setAttribute('class','monster_style last_box');
-        monsters.push($(monster));
-        monstersball.push(-1);
-        //$(monster).css('color',ballcolor[i]);
-        $('.monster_area').append(monster);
+        var diamond = document.createElement("img");
+        diamond.setAttribute('src','img/test.png');
+        diamond.setAttribute('class','diamond_style');
+        if(i==ansCount-1) diamond.setAttribute('class','diamond_style last_box');
+        diamonds.push($(diamond));
+        diamondsball.push(-1);
+        //$(diamond).css('color',ballcolor[i]);
+        $('.diamond_area').append(diamond);
       }
 
       randomball(maxAns-1);
-
     }
+
+      $(".question_area").css("background-image","url(img/monster.png)");
   });
 
-  gameStart = true;
-  //randomball(ballAmount);
-  nowQueNo++;
+  setTimeout(function () {
+    checking = false;
+    nowQueNo++;
+  },500);
+
 }
 
 function clearQue(){
   $('.question').html("");
   $('.ans_area').empty();
-  $('.monster_area').empty();
+  $('.diamond_area').empty();
 
   ansNo.length =0;
-  monsters.length = 0;
-  monstersball.length = 0;
-//  queNum.length = 0;
+  diamonds.length = 0;
+  diamondsball.length = 0;
 }
 
-$(document).keyup(function(event){
-  if (event.keyCode == 73){
-    clearQue();
-    createQue();
-  }
-})
+// $(document).keyup(function(event){
+//   if (event.keyCode == 73){
+//     clearQue();
+//     createQue();
+//   }
+// })

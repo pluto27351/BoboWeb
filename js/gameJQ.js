@@ -1,9 +1,9 @@
 var player = $(".player");
 var bodyArea = $(".ball_area");
-var play_area = $("#play_area")
+var play_area = $("#play_area");
 var balls = [];          //0,1,2,3
-var monsters = [];
-var monstersball = [];   //-1 = 沒有球
+var diamonds = [];
+var diamondsball = [];   //-1 = 沒有球
 var catchedball = -1;  //-1 = 沒有球
 
 var isOnMaster = false;
@@ -14,16 +14,31 @@ var getball = false;
 var ballCD = 0;
 var ballAmount = 4;
 // var ballcolor = ["#FFAA9B", "#86F573", "#8AD5ED", "#FFE68F"];  //, "#C48AFF"
+                  //藍 紅 黃 綠
 var ballcolor = ["#7c86b8","#b96076", "#efbb35","#59a87d"];
-var monstercolor = ['hue-rotate(-123deg)','hue-rotate(27deg)' ,'hue-rotate(60deg)','hue-rotate(123deg)'];
+var diamondcolor = ['hue-rotate(-123deg)','hue-rotate(0deg)' ,'hue-rotate(50deg)','hue-rotate(123deg)'];
 var test = 'hue-rotate(123deg)';
-var gameStart = false;
+var gameStart = false,checking = true;
 
 
 $(document).ready(function(){
   up = down = left = right = false;
+
   setInterval(update,10);
 
+});
+
+$(".startBtn").mouseenter(function(event){
+  $(".startBtn").attr('src',"img/startBtn_click.png");
+});
+$(".startBtn").mouseleave(function(event){
+  $(".startBtn").attr('src',"img/startBtn.png");
+});
+$(".startBtn").click(function(event){
+  randomQue();
+  createQue();
+  gameStart = true;
+  $(".startBtn").css("display","none");
 });
 
 function update(){
@@ -40,7 +55,7 @@ function update(){
 
   if(ballCD <= 0){
     if(!isOnMaster) playerAndBall();
-    monsterAndBall();
+    diamondAndBall();
   }
   else {ballCD -=1;}
 
@@ -66,7 +81,7 @@ function randomball(max){
     ball.offset({top: top,left: left});
     var k= i%4;
     //ball.css('background-color',ballcolor[k]);
-    ball.css('filter', monstercolor[k]);
+    ball.css('filter', diamondcolor[k]);
 
     bodyArea.append(newball);
     balls.push(ball);
@@ -116,7 +131,6 @@ function collision(item,hitObj,padding_top = 0,padding_right = 0){
 
 
 function follow(aim,follower,ptop=0,pright=0) {
-  console.log("top = " + ptop);
   var posY  = aim.offset().top + (aim.height() - follower.height())/2 + ptop;
   var posX  = aim.offset().left + (aim.width() - follower.width())/2 + pright;
   follower.offset({top:posY , left:posX});
@@ -142,28 +156,28 @@ function playerAndBall(){
   }
 } //--function playerAndBall--
 
-function monsterAndBall(){
-  var touchMonster = false;
-  for(var i=0;i<monsters.length;i++){
-  //  var monster = monsters[i];
-    if(collision(player,monsters[i])){
-      touchMonster = true;
+function diamondAndBall(){
+  var touchDiamond = false;
+  for(var i=0;i<diamonds.length;i++){
+  //  var monster = diamonds[i];
+    if(collision(player,diamonds[i])){
+      touchDiamond = true;
       if(!isOnMaster){
         isOnMaster = true;
-        var monsterHasBall = monstersball[i];  //紀錄怪物手上的球
+        var diamondHasBall = diamondsball[i];  //紀錄怪物手上的球
 
-        monstersball[i] = catchedball;         //怪物換球 & 球吸到怪物上
-        if(monstersball[i] != -1){
-          aniMove(monsters[i],balls[catchedball],0);
-          monsters[i].css('filter','grayscale(0%)');
-          monsters[i].css('filter', monstercolor[catchedball]);
-        //  follow(monsters[i],balls[catchedball],20);
+        diamondsball[i] = catchedball;         //怪物換球 & 球吸到怪物上
+        if(diamondsball[i] != -1){
+          aniMove(diamonds[i],balls[catchedball],0);
+          diamonds[i].css('filter','grayscale(0%)');
+          diamonds[i].css('filter', diamondcolor[catchedball]);
+        //  follow(diamonds[i],balls[catchedball],20);
         }else{
-          monsters[i].css('filter','grayscale(100%)');
+          diamonds[i].css('filter','grayscale(100%)');
         }
 
-        if(monsterHasBall != -1){     //如果怪物有球->腳色換球
-          catchedball = monsterHasBall;
+        if(diamondHasBall != -1){     //如果怪物有球->腳色換球
+          catchedball = diamondHasBall;
         //  follow(player,balls[catchedball],15);
           aniMove(player,balls[catchedball],20);
           getball = true;
@@ -176,26 +190,43 @@ function monsterAndBall(){
       }
     }
   }
-  isOnMaster = touchMonster;
+  isOnMaster = touchDiamond;
 } //--function monsterAndBall--
 
 function checkAns() {
-  for(var i=0;i<monstersball.length;i++){
-    var ans = monstersball[i];
-    monsters[i].attr('src','img/eat.gif');
+  checking = true;
+
+  $(".question_area").css("background-image","url(img/monster_eat.gif)");
+  $('.question').html("");
+
+
+  for(var i=0;i<diamondsball.length;i++){
+    // var ans = diamondsball[i];
+    diamonds[i].addClass("eatDiamond");
   }
+  clearball();
+  var correct = true;
+  for(var i=0;i<diamondsball.length;i++){
+    var ans = diamondsball[i];
+    if (ansNo[ans] != 1) correct = false;
+    diamonds[i].addClass("eatDiamond");
+  }
+  // setTimeout(function () {
+  //   for(var i=0;i<diamondsball.length;i++){
+  //     var ans = diamondsball[i];
+  //     if (ansNo[ans] != 1) correct = false;
+  //   }
+  // }, 1000);
 
   setTimeout(function () {
-    clearball();
-    for(var i=0;i<monstersball.length;i++){
-      var ans = monstersball[i];
-      console.log("aaa = " + ansNo[ans]);
-      if (ansNo[ans] == 1) {
-        monsters[i].attr('src','img/test_right.png');
-      }else{
-        monsters[i].css('filter','grayscale(100%)');
-        monsters[i].attr('src','img/test_wrong.png');
-      }
+    if(correct){
+      $(".point_area img:nth-child("+nowQueNo+")").css("filter","grayscale(0%)");
+      $(".point_area img:nth-child("+nowQueNo+")").css('filter', diamondcolor[1]);
+      $(".question_area").css("background-image","url(img/monster_happy.png)");
+    }else{
+      $(".point_area img:nth-child("+nowQueNo+")").css("opacity","0");
+      // $(".point_area img:nth-child("+nowQueNo+")").css('filter', diamondcolor[1]);
+      $(".question_area").css("background-image","url(img/monster_sad.png)");
     }
   }, 1000);
 
@@ -213,6 +244,16 @@ function clearball(){
 }
 
 $(document).keydown(function(event){
+  if(!gameStart) {
+    if(event.keyCode == 32){
+      randomQue();
+      createQue();
+      $(".startBtn").css("display","none");
+      gameStart = true;
+    }
+  return;
+  }
+
   switch (event.keyCode) {
     case 87: //w
     case 38:
@@ -231,14 +272,10 @@ $(document).keydown(function(event){
       right = true;
       break;
     default:
-     console.log(event.keyCode);
       break;
   }
 
-   if(event.keyCode == 32){
-      // getball = false;
-      // catchedball = -1;
-      // ballCD = 30;
+   if(event.keyCode == 32 && !checking){
       checkAns();
    }
 })
@@ -267,10 +304,10 @@ $(document).keyup(function(event){
   }
 })
 
-$(".menu").mouseenter(function(){
-  $(".menuball").css('display','block');
-
-});
-$(".menu").mouseleave(function(){
-  $(".menuball").css('display','none');
-});
+// $(".menu").mouseenter(function(){
+//   $(".menuball").css('display','block');
+//
+// });
+// $(".menu").mouseleave(function(){
+//   $(".menuball").css('display','none');
+// });

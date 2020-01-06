@@ -7,8 +7,9 @@
   <title>小寶大亂鬥</title>
   <meta name="description" content="遊戲分級">
 
-  <!-- Roboto Font -->
+  <!-- Roboto Font
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  -->
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
@@ -20,18 +21,22 @@
   <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
   <!-- local -->
   <link rel="stylesheet" href="css/game_style.css">
+  <link rel="stylesheet" href="css/menu.css">
   <script src="js/firebase.js"></script>
 </head>
 <body>
-  <header class ="menusclear">
-      <a href="index.html" class="logo"><img src="img/menu_logo_b2.png" alt="search"></a>
-      <a href="#" class="menuball info"><img src="img/menu_btn.png" alt="search"><p>分級介紹</p></a>
-      <a href="#" class="menuball quedata"><img src="img/menu_btn.png" alt="search"><p>遊戲介紹</p></a>
-      <a href="#" class="menuball bobogame"><img src="img/menu_btn.png" alt="search"><p>小寶玩分數</p></a>
-      <a href="#" class="menuball people"><img src="img/menu_btn.png" alt="search"><p>製作團隊</p></a>
-     <!-- container_fluid -->
+  <header>
+    <div class= "menu">
+      <a href="index.html" class="menuball"><img src="img/btn_main_s.png" alt="search"><p>首頁</p></a>
+      <a href="info.html" class="menuball"><img src="img/btn_info_s.png" alt="search"><p>分級介紹</p></a>
+      <a href="gameinfo.html" class="menuball"><img src="img/btn_gameinfo_s.png" alt="search"><p>遊戲介紹</p></a>
+      <a href="game.html" class="menuball"><img src="img/btn_game_s.png" alt="search"><p>小遊戲</p></a>
+      <a href="qa.html" class="menuball"><img src="img/btn_qa_s.png" alt="search"><p>題庫</p></a>
+      <a href="https://tzuhua0706.github.io/bao/" class="menuball"><img src="img/btn_bao_s.png" alt="search"><p>小寶玩分數</p></a>
+   </div>
   </header>
   <div class="container">
+      <img src="img/startBtn.png" alt="search" class = "startBtn">
       <div class="clear" id ="que">
         <div class="question_area set_left">
           <h4 class ="question"></h4>
@@ -41,19 +46,19 @@
       <div class="clear">
         <div class="data set_left">
           <div class = "point_area">
-            <img src="img/point.png" alt="search" class="point top_point">
-            <img src="img/point.png" alt="search" class="point top_point">
-            <img src="img/point.png" alt="search" class="point top_point">
-            <img src="img/point.png" alt="search" class="point top_point last_box">
-            <img src="img/point.png" alt="search" class="point">
-            <img src="img/point.png" alt="search" class="point">
-            <img src="img/point.png" alt="search" class="point">
-            <img src="img/point.png" alt="search" class="point last_box">
+            <img src="img/game_point.png" alt="search" class="point top_point">
+            <img src="img/game_point.png" alt="search" class="point top_point">
+            <img src="img/game_point.png" alt="search" class="point top_point">
+            <img src="img/game_point.png" alt="search" class="point top_point last_box">
+            <img src="img/game_point.png" alt="search" class="point">
+            <img src="img/game_point.png" alt="search" class="point">
+            <img src="img/game_point.png" alt="search" class="point">
+            <img src="img/game_point.png" alt="search" class="point last_box">
           </div>
           <img src="img/game_teach.png" alt="search" class="teach">
         </div>
         <div class = "set_right" id = "play_area">
-          <div class ="monster_area"></div>
+          <div class ="diamond_area"></div>
           <img src="img/player.png" alt="search" class="player">
           <div class = "ball_area"></div>
         </div>
@@ -64,5 +69,6 @@
   <script src="js/jquery.js"></script>
   <!-- <script src="js/bootstrap.min.js"></script> -->
   <script src="js/gameJQ.js"></script>
+  <script src="js/navMenu.js"></script>
 </body>
 </html>
